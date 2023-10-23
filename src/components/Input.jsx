@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { DebounceInput } from "react-debounce-input";
+import { useDispatch } from "react-redux"
+import { refreshProfile } from '../redux/profile'
 
 export default function Input() {
     const classNames =
@@ -7,6 +9,8 @@ export default function Input() {
 
     const [search, setSearch] = useState("")
     const [error, setError] = useState("")
+    const dispatch = useDispatch();
+
     const AT = import.meta.env.VITE_GITHUB_ACCESS_TOKEN
 
     const handleFetchFromGithub = (searchText) => {
@@ -23,6 +27,7 @@ export default function Input() {
                 return resp.json()
             })
             .then((data) => {
+                dispatch(refreshProfile(data))
                 setError("")
             })
             .catch((err) => {
