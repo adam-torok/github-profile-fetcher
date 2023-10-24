@@ -54,7 +54,7 @@ export default function Input() {
                 debounceTimeout={500}
                 onChange={(e) => handleInputChange(e)} />
 
-            <small>Type the wanted github user's username to the input field to show a basic statistic.</small>
+            <small>Type the wanted github user's username to the input field to show the user's card.</small>
         </>
     );
 }

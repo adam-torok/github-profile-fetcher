@@ -10,6 +10,13 @@ The goal for this project is setting up a react project for fetching data from g
 - [x] Fetching data from github's API
 - [x] Try out Redux
 - [x] Try out styled components
+- [x] Show profile card based on state
+- [x] Show public repositories for given profile on a different page
+- [ ] Install moment for displaying formatted date
+- [ ] Add toasts
 - [ ] 🌞🌕 Add dark mode / light mode
 - [ ] Responsive design
+- [ ] Page transitions?
+- [ ] Scroll to top
 - [ ] Deploy to netlify
+- [ ] 404 page

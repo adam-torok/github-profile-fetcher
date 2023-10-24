@@ -2,6 +2,7 @@ import GithubLottie from "../components/GithubLottie";
 import styled from 'styled-components';
 import Input from "../components/Input";
 import { useSelector } from "react-redux";
+import GithubCard from "../components/GithubCard";
 
 const StyledSearchBar = styled.div`
     small{
@@ -16,16 +17,13 @@ export default function Index() {
 
     return (
         <StyledSearchBar>
-            <div className="container search--container mx-auto max-w-sm mt-5 font-mono">
+            <div className="container search--container mx-auto max-w-lg  mt-5 font-mono">
                 <Input />
-                { !profile && (
+                {!profile && (
                     <GithubLottie />
-                ) }
+                )}
                 {profile && (
-                    <div>
-                        <p>{profile.name}</p>
-                        <img src={profile.avatar_url} alt={profile.name} />
-                    </div>
+                    <GithubCard profile={profile} />
                 )}
             </div>
         </StyledSearchBar>
