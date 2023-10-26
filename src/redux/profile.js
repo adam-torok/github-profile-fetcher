@@ -6,7 +6,7 @@ export const profileSlice = createSlice({
     reducers: {
         refreshProfile: (state, action) => {
             state.profile = action.payload
-        }
+        },
     }
 })
 
