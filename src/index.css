@@ -79,3 +79,9 @@ filter: brightness(0.8) hue-rotate(356deg) blur(10px);
 		filter: brightness(0.7) hue-rotate(356deg) blur(10px);
 	}
 }
+
+
+.repo--container{
+	max-height: 0vh;
+	overflow: scroll;
+}
