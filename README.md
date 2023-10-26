@@ -12,11 +12,13 @@ The goal for this project is setting up a react project for fetching data from g
 - [x] Try out styled components
 - [x] Show profile card based on state
 - [x] Show public repositories for given profile on a different page
-- [ ] Install moment for displaying formatted date
+- [x] Install moment for displaying formatted date
 - [ ] Add toasts
-- [ ] 🌞🌕 Add dark mode / light mode
+- [x] 🌞🌕 Add dark mode / light mode
+    - [ ] Store light or dark mode settings in local storage
 - [ ] Responsive design
 - [ ] Page transitions?
 - [ ] Scroll to top
+- [ ] Refactor
 - [ ] Deploy to netlify
 - [ ] 404 page

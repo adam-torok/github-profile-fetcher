@@ -54,7 +54,7 @@
 	flex-direction: column;
 }
 
-.basic--button{
+.basic--button {
 	border: 2px black dashed;
 	display: flex;
 	align-items: center;
@@ -62,10 +62,20 @@
 	width: 100%;
 	padding: 5px;
 	margin-top: 15px;
-	transition: all 0.2s ease-in-out
+	transition: all 0.2s ease-in-out;
 }
 
-.basic--button:hover{
+.basic--button:hover {
 	background-color: black;
 	color: white;
+}
+
+.app-bg{
+filter: brightness(0.8) hue-rotate(356deg) blur(10px);
+}
+
+@layer utilities {
+	.dark-bg {
+		filter: brightness(0.7) hue-rotate(356deg) blur(10px);
+	}
 }

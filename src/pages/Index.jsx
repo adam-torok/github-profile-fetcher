@@ -18,6 +18,7 @@ export default function Index() {
     return (
         <StyledSearchBar>
             <div className="container search--container mx-auto max-w-lg  mt-5 font-mono">
+                <h5 className="mb-5 text-white font-sans text-bold font-bold text-2xl">GitHub Profile Fetcher!</h5>
                 <Input />
                 {!profile && (
                     <GithubLottie />
