@@ -6,7 +6,6 @@ import { toggleDarkMode } from "../redux/settings"
 import { Tooltip } from 'react-tooltip'
 
 const navigation = [
-    { name: 'Home', href: '/', current: false },
     { name: 'About', href: '/about', current: false },
 ]
 
@@ -17,21 +16,19 @@ function classNames(...classes) {
 export default function Navbar() {
     const settings = useSelector(store => store.settings)
     const dispatch = useDispatch()
-    const tooltipText = settings.darkMode ? 'Toggle dark mode' : 'Toggle light mode'
-    console.log(tooltipText)
 
     const handleModeChange = (() => {
         dispatch(toggleDarkMode())
     })
 
     return (
-        <Disclosure as="nav" className="sticky dark:bg-slate-800 bg-white top-0 z-50 border-b-2 font-mono border-black">
+        <Disclosure as="nav" className="sticky dark:bg-slate-800 bg-white top-0 z-50 border-b-2  border-black">
             {({ open }) => (
                 <>
                     <Tooltip id="links" />
                     <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
                         <div className="relative flex h-16 items-center justify-between">
-                            <h2 className='mr-4 dark:text-white'><b>Github Profile Fetcher</b></h2>
+                            <Link to={'/'} className='mr-4 dark:text-white'><b>Github Fetcher</b></Link>
                             <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                                 <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none">
                                     <span className="absolute -inset-0.5" />
@@ -56,14 +53,20 @@ export default function Navbar() {
                                                 aria-current={item.current ? 'page' : undefined} to={item.href}>{item.name}</Link>
                                         ))}
 
+                                        <span
+                                            data-tooltip-id="links"
+                                            data-tooltip-content='Dark mode'
+                                            className="mr-3 mt-1 text-lg font-medium text-gray-900 dark:text-gray-300">🌞</span>
+
                                         <label className="relative inline-flex items-center cursor-pointer">
-                                            <input onChange={handleModeChange} type="checkbox" value="" className="sr-only peer"></input>
+                                            <input onChange={handleModeChange} type="checkbox" checked={settings.darkMode ? true : false} className="sr-only peer"></input>
                                             <div className="w-10 h-3 bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[8px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-gray-600"></div>
-                                            <span
-                                                data-tooltip-id="links"
-                                                data-tooltip-content={tooltipText}
-                                                className="ml-3 text-lg font-medium text-gray-900 dark:text-gray-300">{settings.darkMode ? '🌞' : '🌙'}</span>
                                         </label>
+
+                                        <span
+                                            data-tooltip-id="links"
+                                            data-tooltip-content='Light mode'
+                                            className="ml-3 mt-1 text-lg font-medium text-gray-900 dark:text-gray-300">🌙</span>
                                     </div>
                                 </div>
                             </div>

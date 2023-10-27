@@ -5,7 +5,7 @@ function Footer() {
         <>
             <Tooltip id="links" />
             <footer
-                className="mt-10 dark:bg-slate-800 bg-white flex flex-col items-center text-center font-mono border-black border-t-2  font-mono border-black">
+                className="mt-10 dark:bg-slate-800 bg-white flex flex-col items-center text-center  border-black border-t-2   border-black">
                 <div className="container pt-9">
                     <div className="mb-9 flex justify-center">
                         <a

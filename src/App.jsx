@@ -10,7 +10,7 @@ import Show from './pages/Show'
 
 function App() {
     return (
-        <>
+        <div>
             <Router>
                 <Background />
                 <GithubCorner />
@@ -22,7 +22,7 @@ function App() {
                 </Routes>
                 <Footer />
             </Router>
-        </>
+        </div>
     )
 }
 

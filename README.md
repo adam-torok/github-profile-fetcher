@@ -15,9 +15,10 @@ The goal for this project is setting up a react project for fetching data from g
 - [x] Install moment for displaying formatted date
 - [ ] Add toasts
 - [x] 🌞🌕 Add dark mode / light mode
-    - [ ] Store light or dark mode settings in local storage
+    - [x] Store light or dark mode settings in local storage
 - [ ] Responsive design
-- [ ] Page transitions?
+- [x] Page transitions? --- use framer-motion
+- [ ] About page
 - [ ] Scroll to top
 - [ ] Refactor
 - [ ] Deploy to netlify

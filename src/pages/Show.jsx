@@ -13,12 +13,12 @@ export default function Show() {
     }, [])
 
     return (
-        <div className="repo--container container search--container mx-auto max-w-lg mt-5 font-mono">
+        <div className="repo--container container search--container mx-auto max-w-lg mt-5 ">
             {repos ? (
                 <div className="dark:text-white">
                     {repos.map((repo) => (
                         <div key={repo.id}>
-                            {repo.name}
+                            {repo.id} - {repo.name} - {repo.language}
                         </div>
                     ))}
                 </div>

@@ -60,6 +60,7 @@
 	align-items: center;
 	justify-content: center;
 	width: 100%;
+	font-weight: bolder;
 	padding: 5px;
 	margin-top: 15px;
 	transition: all 0.2s ease-in-out;
@@ -78,6 +79,14 @@ filter: brightness(0.8) hue-rotate(356deg) blur(10px);
 	.dark-bg {
 		filter: brightness(0.7) hue-rotate(356deg) blur(10px);
 	}
+}
+
+.inverted{
+	filter: invert();
+}
+
+.rev-inverted{
+	filter: invert(0);
 }
 
 

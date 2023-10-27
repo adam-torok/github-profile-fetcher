@@ -1,6 +1,15 @@
+import { useSelector } from "react-redux"
+import { motion } from 'framer-motion'
 export default function GithubCorner() {
+    const mode = useSelector((state) => state.settings.darkMode)
+
     return (
-        <div className="github--corner-container">
+        <motion.div
+            initial={{ x: 500 }}
+            animate={{ x: 0 }}
+            transition={{ duration: 3, ease: 'easeOut'}}
+            exit={{ opacity: 0 }}
+            className={`github--corner-container ${mode == true ? 'rev-inverted' : ''}`} >
             <a
                 target="_blank"
                 rel="noreferrer"
@@ -15,6 +24,6 @@ export default function GithubCorner() {
                     </path>
                 </svg>
             </a>
-        </div>
+        </motion.div>
     )
 }
