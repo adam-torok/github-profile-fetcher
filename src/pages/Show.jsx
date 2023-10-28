@@ -34,7 +34,7 @@ export default function Show() {
     })
 
     return (
-        <div className="max-w-7xl mx-auto mt-10">
+        <div className="max-w-7xl mx-auto mt-10 px-4">
             <Masonry
                 breakpointCols={breakpointColumnsObj}
                 className="my-masonry-grid"

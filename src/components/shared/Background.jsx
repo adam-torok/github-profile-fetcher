@@ -2,7 +2,7 @@ import { motion } from "framer-motion"
 
 export default function Background() {
     return (
-        <div className="absolute w-full inset-0 -z-10 dark:bg-slate-900 dark:dark-bg app-bg overflow-hidden">
+        <div className="fixed w-full inset-0 -z-10 dark:bg-slate-900 dark:dark-bg app-bg overflow-hidden">
             <motion.svg
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 0.5 }}

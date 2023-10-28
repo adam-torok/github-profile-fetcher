@@ -42,8 +42,9 @@
 .github--corner-container {
 	filter: invert();
 	z-index: 9999;
-	position: absolute;
+	position: fixed;
 	right: 0;
+	top: 0;
 }
 
 .search--container {
@@ -90,6 +91,7 @@
 }
 
 .repo--container {
+	max-height: 100vh;
 	overflow: scroll;
 }
 

@@ -13,15 +13,14 @@ The goal for this project is setting up a react project for fetching data from g
 - [x] Show profile card based on state
 - [x] Show public repositories for given profile on a different page
 - [x] Install moment for displaying formatted date
-- [ ] Add toasts
+- [x] Add toasts
 - [x] 🌞🌕 Add dark mode / light mode
     - [x] Store light or dark mode settings in local storage
 - [ ] Responsive design
 - [x] Page transitions? --- use framer-motion
-- [ ] About page
-- [ ] Add masonry for repos
-- [ ] Localise to hungarian and english
-- [ ] Loading states
+- [x] About page
+- [x] Add masonry for repos
+- [ ] Localize to hungarian and english
 - [ ] Scroll to top
 - [ ] Refactor
     - [ ] Folder structure
