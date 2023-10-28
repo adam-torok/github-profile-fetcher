@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { useEffect } from "react"
 import { fetchRepos } from "../redux/repos"
 import { useParams } from "react-router-dom"
+import RepoCard from "../components/RepoCard"
 
 export default function Show() {
     const repos = useSelector((state) => state.repos.repos)
@@ -13,15 +14,15 @@ export default function Show() {
     }, [])
 
     return (
-        <div className="repo--container container search--container mx-auto max-w-lg mt-5 ">
+        <div className="grid grid-cols-4 gap-4 container mx-auto mt-5 max-w-7xl">
             {repos ? (
-                <div className="dark:text-white">
+                <>
                     {repos.map((repo) => (
                         <div key={repo.id}>
-                            {repo.id} - {repo.name} - {repo.language}
+                            <RepoCard repo={repo} />
                         </div>
                     ))}
-                </div>
+                </>
             ) : (
                 <div className="dark:text-white"> No repositories found.</div>
             )}

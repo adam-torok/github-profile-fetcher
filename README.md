@@ -19,7 +19,12 @@ The goal for this project is setting up a react project for fetching data from g
 - [ ] Responsive design
 - [x] Page transitions? --- use framer-motion
 - [ ] About page
+- [ ] Add masonry for repos
+- [ ] Localise to hungarian and english
+- [ ] Loading states
 - [ ] Scroll to top
 - [ ] Refactor
+    - [ ] Folder structure
+    - [ ] Cleaner code
 - [ ] Deploy to netlify
 - [ ] 404 page

@@ -6,7 +6,7 @@ import { toggleDarkMode } from "../redux/settings"
 import { Tooltip } from 'react-tooltip'
 
 const navigation = [
-    { name: 'About', href: '/about', current: false },
+    { name: 'About the project', href: '/about', current: false },
 ]
 
 function classNames(...classes) {
