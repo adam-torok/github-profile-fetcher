@@ -1,4 +1,4 @@
-import { motion as m } from "framer-motion";
+import { motion as m } from "framer-motion"
 
 export default function About() {
     return (

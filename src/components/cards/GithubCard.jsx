@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import moment from 'moment';
+import formatDate from "../../utils/formatDate";
 
 export default function GithubCard({ profile }) {
     return (
@@ -44,7 +44,7 @@ export default function GithubCard({ profile }) {
                             <div className="mt-2">
                                 <h2 className="font-bold text-sm dark:text-white">🗓️ Created at:</h2>
                                 <p className="text-xs dark:text-white">
-                                    {moment(profile.created_at, "YYYYMMDD").fromNow()}
+                                    {formatDate(profile.created_at)}
                                 </p>
                             </div>
 

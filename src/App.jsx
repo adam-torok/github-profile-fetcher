@@ -1,11 +1,10 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-import './App.css'
-import Footer from './components/Footer'
-import Navbar from './components/Navbar'
-import GithubCorner from './components/GithubCorner'
+import GithubCorner from './components/shared/GithubCorner'
+import Background from './components/shared/Background'
+import Footer from './components/shared/Footer'
+import Navbar from './components/shared/Navbar'
 import About from './pages/About'
 import Index from './pages/Index'
-import Background from './components/Background'
 import Show from './pages/Show'
 
 function App() {

@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux"
 import { motion } from 'framer-motion'
+
 export default function GithubCorner() {
     const mode = useSelector((state) => state.settings.darkMode)
 

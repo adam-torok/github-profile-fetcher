@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { useEffect } from "react"
 import { fetchRepos } from "../redux/repos"
 import { useParams } from "react-router-dom"
-import RepoCard from "../components/RepoCard"
+import RepoCard from "../components/cards/RepoCard"
 
 export default function Show() {
     const repos = useSelector((state) => state.repos.repos)

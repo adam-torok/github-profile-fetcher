@@ -2,7 +2,7 @@ import { Disclosure } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { toggleDarkMode } from "../redux/settings"
+import { toggleDarkMode } from "../../redux/settings"
 import { Tooltip } from 'react-tooltip'
 
 const navigation = [

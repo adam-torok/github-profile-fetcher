@@ -1,4 +1,4 @@
-import moment from "moment";
+import formatDate from "../../utils/formatDate";
 
 export default function RepoCard(repo) {
     // TODO: List topics, star count, make it clickable, hover effect, masonry
@@ -7,7 +7,7 @@ export default function RepoCard(repo) {
             <div className="max-w-sm bg-white rounded overflow-hidden shadow-lg border-2 dark:border-white border-dashed border-black">
                 <div className="px-6 py-4">
                     <div className="font-bold text-xl">{repo.repo.name}</div>
-                    <span className="text-xs font-slate-800 mb-1">Updated at: <b>{moment(repo.repo.updated_at, "YYYYMMDD").fromNow()}</b></span>
+                    <span className="text-xs font-slate-800 mb-1">Updated at: {formatDate(repo.repo.updated_at)}<b></b></span>
                     <p className="text-gray-700 text-base">
                         {repo.repo.description ?
                             <span>{repo.repo.description}</span>
