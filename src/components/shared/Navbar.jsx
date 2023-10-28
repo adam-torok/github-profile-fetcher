@@ -23,12 +23,12 @@ export default function Navbar() {
 
     return (
         <Disclosure as="nav" className="sticky dark:bg-slate-800 bg-white top-0 z-50 border-b-2  border-black">
-            {({ open }) => (
+            {({ open, close }) => (
                 <>
                     <Tooltip id="links" />
                     <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
                         <div className="relative flex h-16 items-center justify-between">
-                            <Link to={'/'} className='mr-4 dark:text-white'><b>Github Fetcher</b></Link>
+                            <Link to={'/'} onClick={close} className='mr-4 sm:ml-8 dark:text-white ml-12'><b className=''>Github Fetcher</b></Link>
                             <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                                 <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none">
                                     <span className="absolute -inset-0.5" />
@@ -53,20 +53,22 @@ export default function Navbar() {
                                                 aria-current={item.current ? 'page' : undefined} to={item.href}>{item.name}</Link>
                                         ))}
 
-                                        <span
-                                            data-tooltip-id="links"
-                                            data-tooltip-content='Dark mode'
-                                            className="mr-3 mt-1 text-lg font-medium text-gray-900 dark:text-gray-300">🌞</span>
+                                        <div className='sm:hidden'>
+                                            <span
+                                                data-tooltip-id="links"
+                                                data-tooltip-content='Dark mode'
+                                                className="mr-3 mt-1 text-lg font-medium text-gray-900 dark:text-gray-300">🌞</span>
 
-                                        <label className="relative inline-flex items-center cursor-pointer">
-                                            <input onChange={handleModeChange} type="checkbox" checked={settings.darkMode ? true : false} className="sr-only peer"></input>
-                                            <div className="w-10 h-3 bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[8px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-gray-600"></div>
-                                        </label>
+                                            <label className="relative inline-flex items-center cursor-pointer">
+                                                <input onChange={handleModeChange} type="checkbox" checked={settings.darkMode ? true : false} className="sr-only peer"></input>
+                                                <div className="w-10 h-3 bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[8px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-gray-600"></div>
+                                            </label>
 
-                                        <span
-                                            data-tooltip-id="links"
-                                            data-tooltip-content='Light mode'
-                                            className="ml-3 mt-1 text-lg font-medium text-gray-900 dark:text-gray-300">🌙</span>
+                                            <span
+                                                data-tooltip-id="links"
+                                                data-tooltip-content='Light mode'
+                                                className="ml-3 mt-1 text-lg font-medium text-gray-900 dark:text-gray-300">🌙</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -77,12 +79,28 @@ export default function Navbar() {
                         <div className="space-y-1 px-2 pb-3 pt-2">
                             {navigation.map((item) => (
                                 <Link
+                                    onClick={close}
                                     key={item.name}
-                                    className={classNames(
-                                        item.current ? 'bg-gray-200 text-white' : 'text-gray-800 hover:bg-gray-700 hover:text-white',
-                                        'block rounded-md px-3 py-2 text-base font-medium'
-                                    )} to={item.href}>{item.name}</Link>
+                                    className='text-gray-800 hover:bg-gray-700  dark:text-white hover:text-white block rounded-md px-3 py-2 text-base font-medium'
+                                    to={item.href}>{item.name}</Link>
                             ))}
+
+                            <div className='ml-5 sm:show md:hidden'>
+                                <span
+                                    data-tooltip-id="links"
+                                    data-tooltip-content='Dark mode'
+                                    className="mr-3 mt-1 text-lg font-medium text-gray-900 dark:text-gray-300">🌞</span>
+
+                                <label className="relative inline-flex items-center cursor-pointer">
+                                    <input onChange={handleModeChange} type="checkbox" checked={settings.darkMode ? true : false} className="sr-only peer"></input>
+                                    <div className="w-10 h-3 bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[-4px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-gray-600"></div>
+                                </label>
+
+                                <span
+                                    data-tooltip-id="links"
+                                    data-tooltip-content='Light mode'
+                                    className="ml-3 mt-1 text-lg font-medium text-gray-900 dark:text-gray-300">🌙</span>
+                            </div>
                         </div>
                     </Disclosure.Panel>
                 </>

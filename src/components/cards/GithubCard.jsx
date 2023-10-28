@@ -3,13 +3,15 @@ import formatDate from "../../utils/formatDate";
 
 export default function GithubCard({ profile }) {
     return (
-        <Link to={'profile/'+profile.login} className="w-full mt-5 group relative block">
+        <Link to={'profile/' + profile.login} className="sm-max-w-lg mt-5 group relative block">
             <span className="absolute inset-1 border-2 dark:border-white border-dashed border-black"></span>
-
             <div className="relative flex h-full transform dark:border-white items-end border-2 border-black dark:bg-slate-800 bg-white transition-transform group-hover:-translate-x-2 group-hover:-translate-y-2">
                 <div className="absolute p-4 relative">
-                    <div className="flex">
-                        <img className="w-full h-100 max-w-[40%] border-2 object-cover me-3 border-black" src={profile.avatar_url} alt={profile.name} />
+                    <div className="flex flex-col sm:flex-col md:flex-row">
+                        <img
+                            className="w-full h-100 md:max-w-[40%] sm:max-w-100  sm:me-0 md:me-3 border-2 object-cover  border-black"
+                            src={profile.avatar_url}
+                            alt={profile.name} />
                         <div className="w-full">
                             <h3 className="text-lg font-bold dark:text-white">{profile.name}</h3>
                             <h5 className="text-sm font-gray dark:text-white">@{profile.login}</h5>

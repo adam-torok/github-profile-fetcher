@@ -17,7 +17,7 @@ export default function Form() {
 
     return (
         <StyledSearchBar>
-            <div className="container search--container mx-auto max-w-lg mt-5">
+            <div className="container search--container mx-auto max-w-lg mt-5 max-w-8xl mx-auto px-8 sm:px-6 md:px-8">
                 <h1 className="text-slate-900 text-4xl mb-5 tracking-tight font-extrabold sm:text-5xl dark:text-white">GitHub Fetcher</h1>
                 <h4 className="text-slate-900 text-1xl font-extrabold dark:text-white mb-5">The most 🔥 <i>original</i> 🔥 idea</h4>
                 <Input />

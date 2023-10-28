@@ -62,6 +62,15 @@ export default function About() {
                         </li>
                     </ol>
                 </m.ul>
+
+                <m.h2
+                    initial={{ opacity: 0, x: 100 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 2, ease: 'easeInOut' }}
+                    exit={{ opacity: 0 }}
+                    className="text-slate-900 text-xl tracking-tight mt-5 font-extrabold dark:text-white">
+                    Overall I think I have learnt a lot of new things.
+                </m.h2>
             </section>
         </div>
     )
