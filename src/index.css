@@ -71,8 +71,8 @@
 	color: white;
 }
 
-.app-bg{
-filter: brightness(0.8) hue-rotate(356deg) blur(10px);
+.app-bg {
+	filter: brightness(0.8) hue-rotate(356deg) blur(10px);
 }
 
 @layer utilities {
@@ -81,22 +81,36 @@ filter: brightness(0.8) hue-rotate(356deg) blur(10px);
 	}
 }
 
-.inverted{
+.inverted {
 	filter: invert();
 }
 
-.rev-inverted{
+.rev-inverted {
 	filter: invert(0);
 }
 
-
-.repo--container{
+.repo--container {
 	overflow: scroll;
 }
 
-.repo--card{
+.repo--card {
 	border: 2px solid black;
 	padding: 15px;
 	width: 100%;
 	margin-bottom: 5px;
+}
+
+.my-masonry-grid {
+	display: flex;
+	margin-left: -30px;
+	width: auto;
+}
+.my-masonry-grid_column {
+	padding-left: 30px;
+	background-clip: padding-box;
+}
+
+/* Style your items */
+.my-masonry-grid_column > div {
+	margin-bottom: 30px;
 }
