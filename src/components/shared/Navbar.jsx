@@ -53,7 +53,7 @@ export default function Navbar() {
                                                 aria-current={item.current ? 'page' : undefined} to={item.href}>{item.name}</Link>
                                         ))}
 
-                                        <div className='sm:hidden'>
+                                        <div className='mt-1'>
                                             <span
                                                 data-tooltip-id="links"
                                                 data-tooltip-content='Dark mode'
@@ -61,7 +61,7 @@ export default function Navbar() {
 
                                             <label className="relative inline-flex items-center cursor-pointer">
                                                 <input onChange={handleModeChange} type="checkbox" checked={settings.darkMode ? true : false} className="sr-only peer"></input>
-                                                <div className="w-10 h-3 bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[8px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-gray-600"></div>
+                                                <div className="w-10 h-3 bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[-3px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-gray-600"></div>
                                             </label>
 
                                             <span

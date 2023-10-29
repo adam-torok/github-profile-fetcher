@@ -20,7 +20,7 @@ The goal for this project is setting up a react project for fetching data from g
 - [x] Page transitions? --- use framer-motion
 - [x] About page
 - [x] Add masonry for repos
-- [ ] Localize to hungarian and english
+- [x] Localize to hungarian and english
 - [ ] Scroll to top
 - [ ] Refactor
     - [ ] Folder structure
