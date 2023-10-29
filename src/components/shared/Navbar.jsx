@@ -4,18 +4,28 @@ import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { toggleDarkMode } from "../../redux/settings"
 import { Tooltip } from 'react-tooltip'
-
-const navigation = [
-    { name: 'About the project', href: '/about', current: false },
-]
+import { useTranslation } from 'react-i18next'
+import i18next from 'i18next'
+import { useState } from 'react'
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
 export default function Navbar() {
+    const { t } = useTranslation()
+    const [currentLang, setCurrentLang] = useState('hu')
     const settings = useSelector(store => store.settings)
     const dispatch = useDispatch()
+
+    const changeLanguage = (lng) => {
+        setCurrentLang(lng)
+        i18next.changeLanguage(lng)
+    }
+
+    const navigation = [
+        { name: t('navbar.links.About the project'), href: '/about', current: false },
+    ]
 
     const handleModeChange = (() => {
         dispatch(toggleDarkMode())
@@ -28,11 +38,11 @@ export default function Navbar() {
                     <Tooltip id="links" />
                     <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
                         <div className="relative flex h-16 items-center justify-between">
-                            <Link to={'/'} onClick={close} className='mr-4 sm:ml-8 dark:text-white ml-12'><b className=''>Github Fetcher</b></Link>
+                            <Link to={'/'} onClick={close} className='mr-4 sm:ml-8 dark:text-white ml-12'><b className=''>{t('navbar.Github Fetcher')}</b></Link>
                             <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                                 <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none">
                                     <span className="absolute -inset-0.5" />
-                                    <span className="sr-only">Open main menu</span>
+                                    <span className="sr-only">{t("navbar.Open main menu")}</span>
                                     {open ? (
                                         <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
                                     ) : (
@@ -56,7 +66,7 @@ export default function Navbar() {
                                         <div className='mt-1'>
                                             <span
                                                 data-tooltip-id="links"
-                                                data-tooltip-content='Dark mode'
+                                                data-tooltip-content={t('tooltips.Dark mode')}
                                                 className="mr-3 mt-1 text-lg font-medium text-gray-900 dark:text-gray-300">🌞</span>
 
                                             <label className="relative inline-flex items-center cursor-pointer">
@@ -66,11 +76,24 @@ export default function Navbar() {
 
                                             <span
                                                 data-tooltip-id="links"
-                                                data-tooltip-content='Light mode'
+                                                data-tooltip-content={t('tooltips.Light mode')}
                                                 className="ml-3 mt-1 text-lg font-medium text-gray-900 dark:text-gray-300">🌙</span>
                                         </div>
                                     </div>
                                 </div>
+                                <div className='ml-5'>
+                                { currentLang == 'hu'  && (
+                                    <div onClick={() => changeLanguage('en')} className='text-2xl cursor-pointer'>
+                                        🇺🇸
+                                    </div>
+                                )}
+
+                                { currentLang == 'en'  && (
+                                    <div onClick={() => changeLanguage('hu')} className='text-2xl cursor-pointer'>
+                                        🇭🇺
+                                    </div>
+                                )}
+                            </div>
                             </div>
                         </div>
                     </div>
@@ -88,7 +111,7 @@ export default function Navbar() {
                             <div className='ml-5 sm:show md:hidden'>
                                 <span
                                     data-tooltip-id="links"
-                                    data-tooltip-content='Dark mode'
+                                    data-tooltip-content={t('tooltips.Dark mode')}
                                     className="mr-3 mt-1 text-lg font-medium text-gray-900 dark:text-gray-300">🌞</span>
 
                                 <label className="relative inline-flex items-center cursor-pointer">
@@ -98,7 +121,7 @@ export default function Navbar() {
 
                                 <span
                                     data-tooltip-id="links"
-                                    data-tooltip-content='Light mode'
+                                    data-tooltip-content={t('tooltips.Light mode')}
                                     className="ml-3 mt-1 text-lg font-medium text-gray-900 dark:text-gray-300">🌙</span>
                             </div>
                         </div>

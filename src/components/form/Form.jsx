@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next"
 import { Suspense } from "react"
 
 export default function Form() {
-    const { t, i18n } = useTranslation()
+    const { t } = useTranslation()
     const { profile } = useSelector(state => state.profile)
 
     const StyledSearchBar = styled.div`
@@ -22,8 +22,8 @@ export default function Form() {
         <Suspense fallback="loading">
             <StyledSearchBar>
                 <div className="container search--container mx-auto max-w-lg mt-5 max-w-8xl mx-auto px-8 sm:px-6 md:px-8">
-                    <h1 className="text-slate-900 text-4xl mb-5 tracking-tight font-extrabold sm:text-5xl dark:text-white">{t('Welcome to React')}</h1>
-                    <h4 className="text-slate-900 text-1xl font-extrabold dark:text-white mb-5">The most 🔥 <i>original</i> 🔥 idea</h4>
+                    <h1 className="text-slate-900 text-4xl mb-5 tracking-tight font-extrabold sm:text-5xl dark:text-white">{t('form.Github Fetcher')}</h1>
+                    <h4 className="text-slate-900 text-1xl font-extrabold dark:text-white mb-5">{t('form.The most 🔥 original 🔥 idea')}</h4>
                     <Input />
                     {!profile && (
                         <GithubLottie />

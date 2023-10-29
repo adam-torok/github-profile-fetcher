@@ -1,7 +1,46 @@
 {
-	"title": "Na",
-	"Welcome to React": "Welcome to React and react-i18next",
-	"description": {
-		"part2": "some description"
-	}
+	"form": {
+		"Github Fetcher": "Github Fetcher",
+		"The most 🔥 original 🔥 idea": "The most 🔥 original 🔥 idea",
+		"Type the wanted github user's username to the input field to show the user's card.": "Type the wanted github user's username to the input field to show the user's card.",
+		"Username of wanted Github user": "Username of wanted Github user"
+	},
+	"tooltips": {
+    "It won't work haha": "It won't work haha",
+    "Dark mode": "Dark mode",
+    "Light mode": "Light mode"
+  },
+  "navbar": {
+    "Github Fetcher": "Github Fetcher",
+    "Open main menu": "Open main menu",
+    "links": {
+      "About the project": "About the project"
+    }
+  },
+  "pages": {
+    "about": {
+      "Why have I started this project?": "Why have I started this project?",
+      "I had a Vue background, but I wanted to learn React.": "I had a Vue background, but I wanted to learn React.",
+      "In the past I've already tried out React a few times, but I never liked how a React app looks like (still not do)": "In the past I've already tried out React a few times, but I never liked how a React app looks like (still not do)",
+      "I have started this project for practicing React again. I have set a few goals considering I just started the learning process." : "I have started this project for practicing React again. I have set a few goals considering I just started the learning process.",
+      "My goals for this project": "My goals for this project:",
+      "Practice React basics": "Practice React basics",
+      "Router": "Router",
+      "Components": "Components",
+      "Props": "Props",
+      "Redux": "Redux",
+      "Fetching data from githubs API": "Fetching data from github's API",
+      "Store my github key in a .env variable - used for more requests to the public API": "Store my github key in a .env variable - used for more requests to the public API",
+      "Use tailwindcss": "Use tailwindcss",
+      "Try out styled components": "Try out styled components",
+      "Adding dark mode toggle, which is stored in localStorage": "Adding dark mode toggle, which is stored in localStorage",
+      "Learn best practices eg. folder structure": "Learn best practices eg. folder structure",
+      "Trying out different libraries like:": "Trying out different libraries like:",
+      "Framer motion - for animations": "Framer motion - for animations",
+      "Moment - for displaying formatted date (I was lazy)": "Moment - for displaying formatted date (I was lazy)",
+      "React tooltip - for displaying tooltips": "React tooltip - for displaying tooltips",
+      "React hot toast - for displaying toast notifications": "React hot toast - for displaying toast notifications",
+      "Overall I think I have learnt a lot of new things.": "Overall I think I have learnt a lot of new things."
+    }
+  }
 }

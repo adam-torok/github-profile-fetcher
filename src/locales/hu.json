@@ -1,7 +1,46 @@
 {
-	"title": "Title",
-	"Welcome to React": "Welcome to React and react-i18next",
-	"description": {
-		"part2": "some description"
-	}
+	"form": {
+		"Github Fetcher": "Github Fetcher",
+		"The most 🔥 original 🔥 idea": "A leg 🔥 egyedibb 🔥 ötlet",
+		"Type the wanted github user's username to the input field to show the user's card.": "Írja be a kívánt Github felhasználó felhasználónevét az input mezőbe a felhasználó kártyájának megjelenítéséhez.",
+		"Username of wanted Github user": "A kívánt Github felhasználó felhasználóneve"
+	},
+	"tooltips": {
+    "It won't work haha": "Nem fog működni, haha",
+    "Dark mode": "Sötét mód",
+    "Light mode": "Világos mód"
+  },
+  "navbar": {
+    "Github Fetcher": "Github Fetcher",
+    "Open main menu": "Főmenü megnyitása",
+    "links": {
+      "About the project": "A projekt névjegye"
+    }
+  },
+  "pages": {
+    "about": {
+      "Why have I started this project?": "Miért indítottam el ezt a projektet?",
+      "I had a Vue background, but I wanted to learn React.": "Korábban Vue-val dolgoztam, de szerettem volna megtanulni a Reactet.",
+      "In the past I've already tried out React a few times, but I never liked how a React app looks like (still not do)": "Korábban már kipróbáltam a Reactet, de soha nem tetszett, ahogyan egy React alkalmazás néz ki (még mindig nem igazán).",
+      "I have started this project for practicing React again. I have set a few goals considering I just started the learning process." : "Ezt a projektet azért kezdtem el, hogy újra gyakoroljam a Reactet. Néhány célt állítottam fel magamnak, figyelembe véve, hogy épp csak elkezdtem a tanulási folyamatot.",
+      "My goals for this project": "Céljaim a projekttel kapcsolatban:",
+      "Practice React basics": "React alapok gyakorlása",
+      "Router": "Router",
+      "Components": "Komponensek",
+      "Props": "Props",
+      "Redux": "Redux",
+      "Fetching data from github API": "Adatok lekérése a Github API-ból",
+      "Store my github key in a .env variable - used for more requests to the public API": "A Github kulcsom tárolása egy .env változóban",
+      "Use tailwindcss": "Tailwindcss használata",
+      "Try out styled components": "Styled components kipróbálása",
+      "Adding dark mode toggle, which is stored in localStorage": "Sötét mód kapcsoló hozzáadása, amelyet a localStorage-ban tárolok",
+      "Learn best practices eg. folder structure": "Mappastuktúrák kipróbálása",
+      "Trying out different libraries like:": "Különböző könyvtárak kipróbálása, mint például:",
+      "Framer motion - for animations": "Framer motion - animációkhoz",
+      "Moment - for displaying formatted date (I was lazy)": "Moment - formázott dátum megjelenítéséhez",
+      "React tooltip - for displaying tooltips": "React tooltip - tooltip-ek megjelenítéséhez",
+      "React hot toast - for displaying toast notifications": "React hot toast - értesítések megjelenítéséhez",
+      "Overall I think I have learnt a lot of new things.": "Összességében úgy gondolom, hogy sok új dolgot tanultam."
+    }
+  }
 }

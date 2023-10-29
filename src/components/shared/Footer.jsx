@@ -1,6 +1,8 @@
+import { useTranslation } from "react-i18next";
 import { Tooltip } from "react-tooltip"
 
 function Footer() {
+    const { t } = useTranslation()
     return (
         <>
             <Tooltip id="links" />
@@ -10,7 +12,7 @@ function Footer() {
                     <div className="mb-9 flex justify-center">
                         <a
                             data-tooltip-id="links"
-                            data-tooltip-content="It won't work haha"
+                            data-tooltip-content={t('tooltips.default')}
                             data-tooltip-place="top"
                             href="#!" className="mr-9 dark:text-white">
                             <svg
@@ -24,7 +26,7 @@ function Footer() {
                         </a>
                         <a
                             data-tooltip-id="links"
-                            data-tooltip-content="It won't work haha"
+                            data-tooltip-content={t('tooltips.default')}
                             data-tooltip-place="top"
                             href="#!" className="mr-9 dark:text-white">
                             <svg
@@ -38,7 +40,7 @@ function Footer() {
                         </a>
                         <a
                             data-tooltip-id="links"
-                            data-tooltip-content="It won't work haha"
+                            data-tooltip-content={t('tooltips.default')}
                             data-tooltip-place="top"
                             href="#!" className="mr-9 dark:text-white">
                             <svg
@@ -52,7 +54,7 @@ function Footer() {
                         </a>
                         <a
                             data-tooltip-id="links"
-                            data-tooltip-content="It won't work haha"
+                            data-tooltip-content={t('tooltips.default')}
                             data-tooltip-place="top"
                             href="#!" className="mr-9 dark:text-white">
                             <svg
@@ -66,7 +68,7 @@ function Footer() {
                         </a>
                         <a
                             data-tooltip-id="links"
-                            data-tooltip-content="It won't work haha"
+                            data-tooltip-content={t('tooltips.default')}
                             data-tooltip-place="top"
                             href="#!" className="mr-0 dark:text-white">
                             <svg
